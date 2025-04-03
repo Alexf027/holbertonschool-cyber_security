@@ -1,2 +1,3 @@
 #!/bin/bash
-if [ "$(sha256sum "$1" | cut -d ' ' -f1)" = "$2" ]; then echo "$1: OK"; fi
+echo "$2  $1" > tmp
+sha256sum -c tmp | grep ': OK'
