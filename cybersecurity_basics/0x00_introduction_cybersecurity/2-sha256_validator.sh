@@ -1,3 +1,2 @@
 #!/bin/bash
-echo "$2  $1" > tmp
-sha256sum -c tmp | grep ': OK'
+echo "$2  $1" | sha256sum -c -
